@@ -1,9 +1,9 @@
 __author__ = 'MatthewHan'
 import random
-import datetime
+import time
 
 def bubble_sort(list):
-
+    start = time.time()
     #Set swapped to true to start the loop
     swapped = True
     while swapped:
@@ -15,6 +15,9 @@ def bubble_sort(list):
                 list[i],list[i+1] = list[i+1],list[i]
                 #if an item has been swapped set swapped to true and restart the loop until no values are swapped
                 swapped = True
+    end = time.time()
+    elapsed = end - start
+    print 'This sort took', elapsed,'seconds'
     return list
 
 def test_sort(testamt):
